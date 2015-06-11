@@ -1,7 +1,7 @@
 {
   "name": "week7_reddit_js",
   "version": "1.0.0",
-  "description": "",
+  "description": "A subreddit search app",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.12.4",
@@ -22,6 +22,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexHandy1/reddit-search"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "author": "",
   "license": "ISC"
 }

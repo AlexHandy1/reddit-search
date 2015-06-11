@@ -24,7 +24,8 @@ Steps/ To-do
 - write test for API search factory
 - build factory API to reddit and show results
 - tidy up front-end
-- Link in to DB
+- serve to Heroku
+- Link in to DB for Search results
 - Post to an API
 - explore Protractor testing?
 

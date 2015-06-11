@@ -2,8 +2,9 @@
 <html lang="en" ng-app="SubRedditSearch">
   <head>
     <meta charset="utf-8">
-    <title>Reddit Latest SubReddit Search</title>
+    <title>Reddit Latest Subreddit Search</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -11,18 +12,16 @@
 
   <body ng-controller='subRedditSearchController as subRedditSearch'>
     <div class='container'>
-      <h1> SubReddit Search </h1>
+      <h1 class='text-center'> Search for the latest subreddit articles </h1>
 
       <div class='row'>
-        <div class='column md'>
+        <div class='col-md-3'>
           <!-- add specific column positioning and make bigger-->
           <img src="img/reddit-logo.png">
         </div>
-      </div>
-
        <!-- add specific column positioning so sits on side-->
-      <div class='column md'>
-        <form class="form-horizontal">
+      <div class='col-md-9'>
+        <form class="form-horizontal" id='search-bar'>
           <input type="text" placeholder="Enter a Subreddit" ng-model="subRedditSearch.searchTerm">
           <button class="btn" ng-click='subRedditSearch.doSearch()'>Search</button>
         </form>
