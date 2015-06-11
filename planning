@@ -1,0 +1,33 @@
+Sum - one page reddit search app that returns the latest 10 titles and links for given subreddit search term e.g. /r/bitcoin
+Timeframe - by tomorrow lunch
+Technologies - fullstack JS (Angular, NodeJS/Express, MongoDB) >> try and serve to Heroku
+
+User Stories
+
+1. As a User,
+   So that I can stay on top of the latest trends
+   I want to be able to search for the latest subreddits
+2. As an admin
+   So that I can understand what people are searching
+   I want to be able to store user searches in a database that can send to an API endpoint
+
+Steps/ To-do
+- set-up Node, dependencies and file structure
+- set-up HTML frame
+- set-up Node Express to serve home-page
+- set-up an Angular app structure
+- write test for displaying search results
+- build controller with dummy search results and have iterating list
+- write test for API search factory
+- build factory API to reddit and show results
+- tidy up front-end
+- Link in to DB
+- Post to an API
+- explore Protractor testing?
+
+
+
+Potential Blockers (e.g. brand new topics)
+>> combining ejs with angular to retrieve and show values
+>> Protractor testing
+>> more advanced API testing
