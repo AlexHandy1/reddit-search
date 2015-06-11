@@ -10,6 +10,9 @@ User Stories
 2. As an admin
    So that I can understand what people are searching
    I want to be able to store user searches in a database that can send to an API endpoint
+3. As a User,
+   So that I don't see too many results,
+   I only want to be able to see the top 10 latest subreddit topics
 
 Steps/ To-do
 - set-up Node, dependencies and file structure

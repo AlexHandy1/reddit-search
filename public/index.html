@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="GitUserSearch">
+<html lang="en" ng-app="SubRedditSearch">
   <head>
     <meta charset="utf-8">
     <title>Reddit Latest SubReddit Search</title>
@@ -9,7 +9,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
   </head>
 
-  <body>
+  <body ng-controller='subRedditSearchController as subRedditSearch'>
     <div class='container'>
       <h1> SubReddit Search </h1>
 
@@ -23,18 +23,20 @@
        <!-- add specific column positioning so sits on side-->
       <div class='column md'>
         <form class="form-horizontal">
-          <input type="text" placeholder="Enter a Subreddit">
-          <button class="btn">Search</button>
+          <input type="text" placeholder="Enter a Subreddit" ng-model="subRedditSearch.searchTerm">
+          <button class="btn" ng-click='subRedditSearch.doSearch()'>Search</button>
         </form>
-        <ul class="list-group" >
+        <ul class="list-group" ng-repeat="subReddits in subRedditSearch.searchResult">
           <li class="list-group-item">
-            <b> Latest post title </b>
+            <b> {{subReddits.data.title}} </b>
             >>
-            <a href='#'> Subreddit Link </a>
+            <a ng-href='{{subReddits.data.url}}'> Read More</a>
           </li>
         </ul>
       </div>
     </div>
     <script src="js/app.js"></script>
+    <script src="js/subRedditSearchController.js"></script>
+    <script src="js/subRedditSearchFactory.js"></script>
   </body>
 </html>
