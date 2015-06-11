@@ -1,5 +1,5 @@
 subRedditSearch.factory('Search', ['$http', function($http) {
-  var queryURLfront = "http://www.reddit.com/r/"
+  var queryURLfront = "https://www.reddit.com/r/"
   var queryURLback = "/new.json?sort=new"
 
   return {
