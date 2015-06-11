@@ -1,5 +1,11 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+// var WORKERS = process.env.WEB_CONCURRENCY || 1;
+
+// throng(start, {
+//   workers: WORKERS,
+//   lifetime: Infinity
+// });
 
 var app = express();
 var path = require('path');
@@ -9,6 +15,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
 app.set('port', process.env.PORT || 3000);
 
 // ROUTES
@@ -25,4 +32,3 @@ app.listen(app.get('port'), function() {
 });
 
 module.exports = app;
-

@@ -2,7 +2,7 @@
   "name": "week7_reddit_js",
   "version": "1.0.0",
   "description": "A subreddit search app",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.12.4",
     "ejs": "^2.3.1",
