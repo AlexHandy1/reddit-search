@@ -13,6 +13,9 @@ User Stories
 3. As a User,
    So that I don't see too many results,
    I only want to be able to see the top 10 latest subreddit topics
+4. As a User,
+   So that I understand why I don't get results,
+   I want to see an error message
 
 Steps/ To-do
 - set-up Node, dependencies and file structure

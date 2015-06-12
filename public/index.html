@@ -16,14 +16,12 @@
 
       <div class='row'>
         <div class='col-md-3'>
-          <!-- add specific column positioning and make bigger-->
           <img src="img/reddit-logo.png">
         </div>
-       <!-- add specific column positioning so sits on side-->
       <div class='col-md-9'>
-        <form class="form-horizontal" id='search-bar'>
+        <form class="form-horizontal" id='search-bar' ng-submit='subRedditSearch.doSearch()'>
           <input type="text" placeholder="Enter a Subreddit" ng-model="subRedditSearch.searchTerm">
-          <button class="btn" ng-click='subRedditSearch.doSearch()'>Search</button>
+          <input type="submit" class="btn">Search</input>
         </form>
         <ul class="list-group" ng-repeat="subReddits in subRedditSearch.searchResult">
           <li class="list-group-item">
@@ -36,6 +34,7 @@
     </div>
     <script src="js/app.js"></script>
     <script src="js/searchFactory.js"></script>
+    <script src="js/searchtermFactory.js"></script>
     <script src="js/subRedditSearchController.js"></script>
   </body>
 </html>
