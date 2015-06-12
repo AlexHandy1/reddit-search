@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+
   </head>
 
   <body ng-controller='subRedditSearchController as subRedditSearch'>
@@ -21,7 +23,7 @@
       <div class='col-md-9'>
         <form class="form-horizontal" id='search-bar' ng-submit='subRedditSearch.doSearch()'>
           <input type="text" placeholder="Enter a Subreddit" ng-model="subRedditSearch.searchTerm">
-          <input type="submit" class="btn">Search</input>
+          <input type="submit" class="btn"></input>
         </form>
         <ul class="list-group" ng-repeat="subReddits in subRedditSearch.searchResult">
           <li class="list-group-item">
@@ -32,6 +34,13 @@
         </ul>
       </div>
     </div>
+    <script>
+      $(document).ready( function(){
+          $('.btn').click(function() {
+            $("img").effect("shake");
+          });
+      });
+    </script>
     <script src="js/app.js"></script>
     <script src="js/searchFactory.js"></script>
     <script src="js/searchtermFactory.js"></script>

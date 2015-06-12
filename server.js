@@ -25,10 +25,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/searchtermsdb', function(req, res) {
- console.log(req.query)
   var searchterm = req.query.searchterm;
-  console.log(searchterm);
-
   var collection = db.get('reddit')
 
   collection.insert(
@@ -41,16 +38,6 @@ app.post('/searchtermsdb', function(req, res) {
         res.redirect('/');
       }
     });
-})
-
-//API ENDPOINT
-app.get('/searchterm', function(req, res) {
-  res.json({});
-})
-
-app.post('/searchterm', function(req, res) {
-  // console.log(req.body)
-  // res.send(req.body.test)
 })
 
 // PORT INITIALISATION
