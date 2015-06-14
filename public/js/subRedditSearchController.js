@@ -1,4 +1,4 @@
-subRedditSearch.controller('subRedditSearchController', ['Search', 'SearchTerm', function(Search, SearchTerm) {
+subRedditSearch.controller('subRedditSearchController', ['Search', 'SearchTerm', 'FindSearch',function(Search, SearchTerm, FindSearch) {
   var self = this;
 
   self.doSearch = function() {
@@ -7,6 +7,9 @@ subRedditSearch.controller('subRedditSearchController', ['Search', 'SearchTerm',
       self.searchResult = response.data.data.children
     })
     SearchTerm.query(self.searchTerm)
+    .then(function(response) {
+    })
+    FindSearch.query()
     .then(function(response) {
       console.log(response)
     })
